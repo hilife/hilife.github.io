@@ -4,6 +4,15 @@ img属性，改变图片显示效果。
 
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+		console.info('ready');
+		$('img').foreach(function(){
+			console.info($(this).width());
+		});
+	});
+</script>
+
 <img src="http://img.703804.com/forum/201105/27/170050srrqxsyu2sq8990j.jpg" />
 <img src="http://img.703804.com/forum/201105/27/1700516ctdyxkiiwtw9yif.jpg" />
 <img src="http://mmbiz.qpic.cn/mmbiz/14icnYGypic3sp5CkiclHIFk1qw0ic3MBN9IBciae3icZDzicJicuuIIaclXLEbFZE0LckL88icVVIRHKib7CLn0FZfzbaBA/0" />
