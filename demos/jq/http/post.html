@@ -1,4 +1,5 @@
 
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script> 
 function openPostWindow(url, data, name) {
 	var tempForm = document.createElement("form");
@@ -11,18 +12,28 @@ function openPostWindow(url, data, name) {
 	hideInput.name = "content"
 	hideInput.value = data;
 	tempForm.appendChild(hideInput);
-	tempForm.attachEvent("onsubmit", function() {
+	// attachEvent
+	tempForm.addEventListener("onsubmit", function() {
 		openWindow(name);
 	});
 	document.body.appendChild(tempForm);
+	// document.appendChild(tempForm);
 	tempForm.fireEvent("onsubmit");
+	// tempForm.dispatchEvent("onsubmit");
 	tempForm.submit();
 	document.body.removeChild(tempForm);
+	// document.removeChild(tempForm);
 }
 
 function openWindow(name) {
 	window.open('about:blank', name, 'height=400, width=400, top=0, left=0, toolbar=yes, menubar=yes, scrollbars=yes, resizable=yes,location=yes, status=yes');
 }
 
-openPostWindow('http://bbs.pediy.com/search.php?do=process', {'query':'Crack'}, 'ok');
+$(function(){
+	openPostWindow('http://bbs.pediy.com/search.php?do=process', {'query':'Crack'}, 'ok');
+});
 </script> 
+
+<body>
+	<h3>body</h3>
+</body>
