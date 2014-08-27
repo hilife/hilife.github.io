@@ -11,12 +11,17 @@ eval("a=1");
 
 <script type="text/javascript">
 	$(document).ready(function(){
+		console.info('initial size of window :', $(window).width(), $(window).height());
 		$('img').each(function(){
 			// 加载完成之后才知道尺寸
 			$(this).load(function(){
 				console.info($(this).width(),$(this).height(), this.src);
 			});
 		});
+	});
+
+	$(window).resize(function(){
+		console.info('size of window :', $(window).width(), $(window).height());
 	});
 	$(function(){
 		console.info('ready');
@@ -32,3 +37,4 @@ eval("a=1");
 <img src="https://dm.victoriassecret.com/imagefeatures/1180x681/1267053837027/20140825-home-ftr.jpg" />
 <img src="http://bbs.703804.com/data/attachment/forum/201404/01/102047enhh7owfrrwkwfdr.jpg" />
 <img src="http://bbs.703804.com/data/attachment/forum/201408/19/164149ckc8kzt42ta46a6k.jpg" />
+<img src="http://bbs.qianyan001.com/uploads/allimg/140625/6_140625103803_1.jpg" />
