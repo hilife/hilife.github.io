@@ -5,9 +5,9 @@
 	$(document).ready(function(){
 		$.ajax({
 			type:'GET',
-			url:'http://www.sogou.com/web',
+			url:'http://cn.bing.com/search',
 			data:{
-				'query':'html'
+				'q':'ajax+url'
 			}
 		}).done(function(html){
 			console.info(html);
