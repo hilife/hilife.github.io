@@ -12,6 +12,7 @@ eval("a=1");
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('img').each(function(){
+			// 加载完成之后才知道尺寸
 			$(this).load(function(){
 				console.info($(this).width(),$(this).height(), this.src);
 			});
