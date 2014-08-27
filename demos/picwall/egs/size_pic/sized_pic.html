@@ -1,15 +1,24 @@
 <!-- 
 img属性，改变图片显示效果。
+
+$('img').each(function(){$(this).css('width',100)});
+$('img').css('width',200)
+eval("a=1");
+
  -->
 
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		console.info('ready');
-		$('img').foreach(function(){
-			console.info($(this).width());
+		$('img').each(function(){
+			$(this).load(function(){
+				console.info($(this).width(),$(this).height(), this.src);
+			});
 		});
+	});
+	$(function(){
+		console.info('ready');
 	});
 </script>
 
